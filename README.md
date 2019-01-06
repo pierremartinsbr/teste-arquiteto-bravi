@@ -46,6 +46,42 @@ $ \q;
 
 # Como configurar a aplicação #
 
-1. 
+1. Criar o repositório git.
 
+$ mkdir bravit
+
+$ cd bravit
+
+$ git remote add origin https://github.com/bravi-software/teste-arquiteto-bravi.git
+
+2. Clonar o repositório de origem.
+
+$ git clone https://github.com/bravi-software/teste-arquiteto-bravi.git
+
+3. verificar se o diretorio "teste-arquiteto-bravi".
+
+# Como executar os testes da aplicação #
+
+1. No diretorio raiz "bravit" executar.
+
+$ cd teste-arquiteto-bravi
+
+$ mvn clean
+
+$ mvn test
+
+Output: 
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 18.774 s
+[INFO] Finished at: 2019-01-06T10:49:02-02:00
+[INFO] Final Memory: 21M/200M
+[INFO] ------------------------------------------------------------------------
 
