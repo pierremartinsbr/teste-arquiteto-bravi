@@ -20,6 +20,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 import io.swagger.annotations.ApiModelProperty;
 
@@ -27,7 +28,12 @@ import io.swagger.annotations.ApiModelProperty;
 public class Customer {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(generator = "sequence_generator")
+	@SequenceGenerator(
+            name = "sequence_generator",
+            sequenceName = "hibernate_sequence",
+            initialValue = 1
+    )
 	@ApiModelProperty(readOnly=true, hidden=true)
 	private Long id;
 
